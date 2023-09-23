@@ -1,162 +1,132 @@
 <ion-content [fullscreen]="true" class="content">
   <div class="main">
-  <ion-row>
-    <ion-col size="3">
-      <ion-fab-button class="floating-button" (click)="this.idioma='espanol'">
-        <ion-img src="/assets/images/espana.png"></ion-img>
-      </ion-fab-button>
-    </ion-col>
-    <ion-col size="3">
-      <ion-fab-button class="floating-button" (click)="this.idioma='portugues'">
-        <ion-img src="/assets/images/portugal.png"></ion-img>
-      </ion-fab-button>
-    </ion-col>
-    <ion-col size="3">
-      <ion-fab-button class="floating-button" (click)="this.idioma='ingles'">
-        <ion-img src="/assets/images/reino-unido.png"></ion-img>
-      </ion-fab-button>
-    </ion-col>
-    <ion-col size="3">
-      <ion-fab>
-        <ion-fab-button>
-          <ion-icon name="chevron-down-circle"></ion-icon>
+    <ion-row>
+      <ion-col size="3">
+        <ion-fab-button class="floating-button" (click)="this.idioma='espanol'">
+          <ion-img src="/assets/images/espana.png"></ion-img>
         </ion-fab-button>
-        <ion-fab-list side="bottom">
+      </ion-col>
+      <ion-col size="3">
+        <ion-fab-button class="floating-button" (click)="this.idioma='portugues'">
+          <ion-img src="/assets/images/portugal.png"></ion-img>
+        </ion-fab-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-fab-button class="floating-button" (click)="this.idioma='ingles'">
+          <ion-img src="/assets/images/reino-unido.png"></ion-img>
+        </ion-fab-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-fab>
           <ion-fab-button>
-            <ion-fab-button class="floating-button" (click)="this.vista='numeros'">
-              <ion-img src="/assets/images/numero-1.png"></ion-img>
-            </ion-fab-button>
+            <ion-icon name="chevron-down-circle"></ion-icon>
           </ion-fab-button>
-          <ion-fab-button>
-            <ion-fab-button class="floating-button" (click)="this.vista='animales'">
-              <ion-img src="/assets/images/leon.png"></ion-img>
+          <ion-fab-list side="bottom">
+            <ion-fab-button>
+              <ion-fab-button class="floating-button" (click)="this.vista='numeros'">
+                <ion-img src="/assets/images/numero-1.png"></ion-img>
+              </ion-fab-button>
             </ion-fab-button>
-          </ion-fab-button>
-          <ion-fab-button>
-            <ion-fab-button class="floating-button" (click)="this.vista='numeros'">
-              <ion-img src="/assets/images/rojo.png"></ion-img>
+            <ion-fab-button>
+              <ion-fab-button class="floating-button" (click)="this.vista='animales'">
+                <ion-img src="/assets/images/leon.png"></ion-img>
+              </ion-fab-button>
             </ion-fab-button>
-          </ion-fab-button>
-        </ion-fab-list>
-      </ion-fab>
-    </ion-col>
-  </ion-row>
+            <ion-fab-button>
+              <ion-fab-button class="floating-button" (click)="this.vista='numeros'">
+                <ion-img src="/assets/images/rosa.png"></ion-img>
+              </ion-fab-button>
+            </ion-fab-button>
+          </ion-fab-list>
+        </ion-fab>
+      </ion-col>
+    </ion-row>
 
-  <div *ngIf="vista === 'numeros'" class="ion-fab-container">
-    <ion-grid>
-      <ion-row>
-        <ion-col>
-          <ion-img src="/assets/images/numero-1.png"></ion-img>
-        </ion-col>
-        <ion-col>
-          <ion-img
-            src="/assets/images/numero-2.png"
-          ></ion-img>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>
-          <ion-img
-            src="/assets/images/numero-3.png"
-          ></ion-img>
-        </ion-col>
-        <ion-col>
-          <ion-img
-            src="/assets/images/numero-4.png"
-          ></ion-img>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>
-          <ion-img
-            src="/assets/images/numero-5.png"
-          ></ion-img>
-        </ion-col>
-        <ion-col>
-          <ion-img
-            src="/assets/images/numero-6.png"
-          ></ion-img>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-  </div>
-  
-  <div *ngIf="vista === 'animales'" class="ion-fab-container">
-    <ion-grid>
-      <ion-row>
-        <ion-col>
-          <ion-img src="/assets/images/vaca.png"></ion-img>
-        </ion-col>
-        <ion-col>
-          <ion-img
-            src="/assets/images/rana.png"
-          ></ion-img>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>
-          <ion-img
-            src="/assets/images/pinguino.png"
-          ></ion-img>
-        </ion-col>
-        <ion-col>
-          <ion-img
-            src="/assets/images/leopardo.png"
-          ></ion-img>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>
-          <ion-img
-            src="/assets/images/leon.png"
-          ></ion-img>
-        </ion-col>
-        <ion-col>
-          <ion-img
-            src="/assets/images/delfin.png"
-          ></ion-img>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-  </div>
+    <div *ngIf="vista === 'numeros'" class="ion-fab-container">
+      <ion-grid>
+        <ion-row>
+          <ion-col class="ion-img-button" (click)="this.generarSonido(this.idioma,'uno')">
+            <ion-img src="/assets/images/numero-1.png"></ion-img>
+          </ion-col>
+          <ion-col class="ion-img-button" (click)="this.generarSonido(this.idioma,'dos')">
+            <ion-img src="/assets/images/numero-2.png"></ion-img>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="ion-img-button" (click)="this.generarSonido(this.idioma,'tres')">
+            <ion-img src="/assets/images/numero-3.png"></ion-img>
+          </ion-col>
+          <ion-col class="ion-img-button" (click)="this.generarSonido(this.idioma,'cuatro')">
+            <ion-img src="/assets/images/numero-4.png"></ion-img>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="ion-img-button" (click)="this.generarSonido(this.idioma,'cinco')">
+            <ion-img src="/assets/images/numero-5.png"></ion-img>
+          </ion-col>
+          <ion-col class="ion-img-button" (click)="this.generarSonido(this.idioma,'seis')">
+            <ion-img src="/assets/images/numero-6.png"></ion-img>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
 
-  <div *ngIf="vista === 'colores'" class="ion-fab-container">
-    <ion-grid>
-      <ion-row>
-        <ion-col>
-          <ion-img src="/assets/images/azul.png"></ion-img>
-        </ion-col>
-        <ion-col>
-          <ion-img
-            src="/assets/images/amarillo.png"
-          ></ion-img>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>
-          <ion-img
-            src="/assets/images/rojo.png"
-          ></ion-img>
-        </ion-col>
-        <ion-col>
-          <ion-img
-            src="/assets/images/azul.png"
-          ></ion-img>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>
-          <ion-img
-            src="/assets/images/blanco.png"
-          ></ion-img>
-        </ion-col>
-        <ion-col>
-          <ion-img
-            src="/assets/images/negro.png"
-          ></ion-img>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
+    <div *ngIf="vista === 'animales'" class="ion-fab-container">
+      <ion-grid>
+        <ion-row>
+          <ion-col class="ion-img-button" (click)="this.generarSonido(this.idioma,'vaca')">
+            <ion-img src="/assets/images/vaca.png"></ion-img>
+          </ion-col>
+          <ion-col class="ion-img-button" (click)="this.generarSonido(this.idioma,'sapo')">
+            <ion-img src="/assets/images/rana.png"></ion-img>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="ion-img-button" (click)="this.generarSonido(this.idioma,'pinguino')">
+            <ion-img src="/assets/images/pinguino.png"></ion-img>
+          </ion-col>
+          <ion-col class="ion-img-button" (click)="this.generarSonido(this.idioma,'tigre')">
+            <ion-img src="/assets/images/leopardo.png"></ion-img>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="ion-img-button" (click)="this.generarSonido(this.idioma,'leon')">
+            <ion-img src="/assets/images/leon.png"></ion-img>
+          </ion-col>
+          <ion-col class="ion-img-button" (click)="this.generarSonido(this.idioma,'delfin')">
+            <ion-img src="/assets/images/delfin.png"></ion-img>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+
+    <div *ngIf="vista === 'colores'" class="ion-fab-container">
+      <ion-grid>
+        <ion-row>
+          <ion-col class="ion-img-button" (click)="this.generarSonido(this.idioma,'rosa')">
+            <ion-img src="/assets/images/rosa.png"></ion-img>
+          </ion-col>
+          <ion-col class="ion-img-button" (click)="this.generarSonido(this.idioma,'amarillo')">
+            <ion-img src="/assets/images/amarillo.png"></ion-img>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="ion-img-button" (click)="this.generarSonido(this.idioma,'rojo')">
+            <ion-img src="/assets/images/rojo.png"></ion-img>
+          </ion-col>
+          <ion-col class="ion-img-button" (click)="this.generarSonido(this.idioma,'azul')">
+            <ion-img src="/assets/images/azul.png"></ion-img>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="ion-img-button" (click)="this.generarSonido(this.idioma,'blanco')">
+            <ion-img src="/assets/images/blanco.png"></ion-img>
+          </ion-col>
+          <ion-col class="ion-img-button" (click)="this.generarSonido(this.idioma,'negro')">
+            <ion-img src="/assets/images/negro.png"></ion-img>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
   </div>
-</div>
 </ion-content>

@@ -9,10 +9,17 @@ export class HomePage implements OnInit {
 
   vista: string = "colores";
   idioma: string = "espanol";
+  item: string = "";
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  generarSonido(idioma:any,item: string ) {
+    const ruta = `/assets/audios/${idioma}-${item}.mp3`
+    const audio = new Audio(ruta);
+    audio.play();
   }
 
 }
