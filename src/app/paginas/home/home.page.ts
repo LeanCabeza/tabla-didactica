@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FirebaseService } from 'src/app/services/firebase.service';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +12,7 @@ export class HomePage implements OnInit {
   idioma: string = "espanol";
   item: string = "";
 
-  constructor() { }
+  constructor(private firebaseService:FirebaseService) { }
 
   ngOnInit() {
   }
@@ -26,6 +27,10 @@ export class HomePage implements OnInit {
       const audio = new Audio(ruta);
       audio.play();
     }
+  }
+
+  logout() {
+    this.firebaseService.logout();
   }
 
 }
