@@ -17,9 +17,15 @@ export class HomePage implements OnInit {
   }
 
   generarSonido(idioma:any,item: string ) {
-    const ruta = `/assets/audios/${idioma}-${item}.mp3`
-    const audio = new Audio(ruta);
-    audio.play();
+    if (item == ""){
+      const ruta = `/assets/audios/${idioma}.mp3`
+      const audio = new Audio(ruta);
+      audio.play();
+    }else{
+      const ruta = `/assets/audios/${idioma}-${item}.mp3`
+      const audio = new Audio(ruta);
+      audio.play();
+    }
   }
 
 }

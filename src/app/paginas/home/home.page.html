@@ -2,17 +2,17 @@
   <div class="main">
     <ion-row>
       <ion-col size="3">
-        <ion-fab-button class="floating-button" (click)="this.idioma='espanol'">
+        <ion-fab-button class="floating-button" (click)="this.idioma='espanol'; this.generarSonido('spanish','')">
           <ion-img src="/assets/images/espana.png"></ion-img>
         </ion-fab-button>
       </ion-col>
       <ion-col size="3">
-        <ion-fab-button class="floating-button" (click)="this.idioma='portugues'">
+        <ion-fab-button class="floating-button" (click)="this.idioma='portugues'; this.generarSonido('portuguese','')">
           <ion-img src="/assets/images/portugal.png"></ion-img>
         </ion-fab-button>
       </ion-col>
       <ion-col size="3">
-        <ion-fab-button class="floating-button" (click)="this.idioma='ingles'">
+        <ion-fab-button class="floating-button" (click)="this.idioma='ingles'; this.generarSonido('english','')">
           <ion-img src="/assets/images/reino-unido.png"></ion-img>
         </ion-fab-button>
       </ion-col>
@@ -23,17 +23,17 @@
           </ion-fab-button>
           <ion-fab-list side="bottom">
             <ion-fab-button>
-              <ion-fab-button class="floating-button" (click)="this.vista='numeros'">
+              <ion-fab-button class="floating-button" (click)="this.vista='numeros'; this.generarSonido('numeros','')">
                 <ion-img src="/assets/images/numero-1.png"></ion-img>
               </ion-fab-button>
             </ion-fab-button>
             <ion-fab-button>
-              <ion-fab-button class="floating-button" (click)="this.vista='animales'">
+              <ion-fab-button class="floating-button" (click)="this.vista='animales'; this.generarSonido('animales','')">
                 <ion-img src="/assets/images/leon.png"></ion-img>
               </ion-fab-button>
             </ion-fab-button>
             <ion-fab-button>
-              <ion-fab-button class="floating-button" (click)="this.vista='numeros'">
+              <ion-fab-button class="floating-button" (click)="this.vista='colores'; this.generarSonido('colores','')">
                 <ion-img src="/assets/images/rosa.png"></ion-img>
               </ion-fab-button>
             </ion-fab-button>
