@@ -2,52 +2,55 @@
   <div class="main">
   <ion-row>
     <ion-col size="3">
-      <ion-fab-button class="floating-button">
+      <ion-fab-button class="floating-button" (click)="this.idioma='espanol'">
         <ion-img src="/assets/images/espana.png"></ion-img>
       </ion-fab-button>
     </ion-col>
     <ion-col size="3">
-      <ion-fab-button class="floating-button">
+      <ion-fab-button class="floating-button" (click)="this.idioma='portugues'">
         <ion-img src="/assets/images/portugal.png"></ion-img>
       </ion-fab-button>
     </ion-col>
     <ion-col size="3">
-      <ion-fab-button class="floating-button">
+      <ion-fab-button class="floating-button" (click)="this.idioma='ingles'">
         <ion-img src="/assets/images/reino-unido.png"></ion-img>
       </ion-fab-button>
     </ion-col>
     <ion-col size="3">
       <ion-fab>
         <ion-fab-button>
-          <ion-icon name="chevron-forward-circle"></ion-icon>
+          <ion-icon name="chevron-down-circle"></ion-icon>
         </ion-fab-button>
         <ion-fab-list side="bottom">
           <ion-fab-button>
-            <ion-icon name="document"></ion-icon>
+            <ion-fab-button class="floating-button" (click)="this.vista='numeros'">
+              <ion-img src="/assets/images/numero-1.png"></ion-img>
+            </ion-fab-button>
           </ion-fab-button>
           <ion-fab-button>
-            <ion-icon name="color-palette"></ion-icon>
+            <ion-fab-button class="floating-button" (click)="this.vista='animales'">
+              <ion-img src="/assets/images/leon.png"></ion-img>
+            </ion-fab-button>
           </ion-fab-button>
           <ion-fab-button>
-            <ion-icon name="globe"></ion-icon>
+            <ion-fab-button class="floating-button" (click)="this.vista='numeros'">
+              <ion-img src="/assets/images/rojo.png"></ion-img>
+            </ion-fab-button>
           </ion-fab-button>
         </ion-fab-list>
       </ion-fab>
     </ion-col>
   </ion-row>
-  <div class="ion-fab-container">
+
+  <div *ngIf="vista === 'numeros'" class="ion-fab-container">
     <ion-grid>
       <ion-row>
         <ion-col>
-          <ion-img
-            src="/assets/images/numero-1.png"
-            alt="The Wisconsin State Capitol building in Madison, WI at night"
-          ></ion-img>
+          <ion-img src="/assets/images/numero-1.png"></ion-img>
         </ion-col>
         <ion-col>
           <ion-img
             src="/assets/images/numero-2.png"
-            alt="The Wisconsin State Capitol building in Madison, WI at night"
           ></ion-img>
         </ion-col>
       </ion-row>
@@ -55,13 +58,11 @@
         <ion-col>
           <ion-img
             src="/assets/images/numero-3.png"
-            alt="The Wisconsin State Capitol building in Madison, WI at night"
           ></ion-img>
         </ion-col>
         <ion-col>
           <ion-img
             src="/assets/images/numero-4.png"
-            alt="The Wisconsin State Capitol building in Madison, WI at night"
           ></ion-img>
         </ion-col>
       </ion-row>
@@ -69,13 +70,89 @@
         <ion-col>
           <ion-img
             src="/assets/images/numero-5.png"
-            alt="The Wisconsin State Capitol building in Madison, WI at night"
           ></ion-img>
         </ion-col>
         <ion-col>
           <ion-img
             src="/assets/images/numero-6.png"
-            alt="The Wisconsin State Capitol building in Madison, WI at night"
+          ></ion-img>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  
+  <div *ngIf="vista === 'animales'" class="ion-fab-container">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-img src="/assets/images/vaca.png"></ion-img>
+        </ion-col>
+        <ion-col>
+          <ion-img
+            src="/assets/images/rana.png"
+          ></ion-img>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-img
+            src="/assets/images/pinguino.png"
+          ></ion-img>
+        </ion-col>
+        <ion-col>
+          <ion-img
+            src="/assets/images/leopardo.png"
+          ></ion-img>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-img
+            src="/assets/images/leon.png"
+          ></ion-img>
+        </ion-col>
+        <ion-col>
+          <ion-img
+            src="/assets/images/delfin.png"
+          ></ion-img>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <div *ngIf="vista === 'colores'" class="ion-fab-container">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-img src="/assets/images/azul.png"></ion-img>
+        </ion-col>
+        <ion-col>
+          <ion-img
+            src="/assets/images/amarillo.png"
+          ></ion-img>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-img
+            src="/assets/images/rojo.png"
+          ></ion-img>
+        </ion-col>
+        <ion-col>
+          <ion-img
+            src="/assets/images/azul.png"
+          ></ion-img>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-img
+            src="/assets/images/blanco.png"
+          ></ion-img>
+        </ion-col>
+        <ion-col>
+          <ion-img
+            src="/assets/images/negro.png"
           ></ion-img>
         </ion-col>
       </ion-row>

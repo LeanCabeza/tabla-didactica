@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePage implements OnInit {
 
+  vista: string = "colores";
+  idioma: string = "espanol";
+
   constructor() { }
 
   ngOnInit() {
