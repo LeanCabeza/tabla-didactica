@@ -15,12 +15,18 @@ ion-grid {
  background-image: url("/assets/images/background.jpeg");
 }
 
-
+//Vertical
 ion-img {
-    height: 25vh;
+    height: 26vh;
     transition: transform 0.2s, box-shadow 0.2s;
   }
-  
+
+  @media (orientation: landscape) {
+    ion-img {
+      height: 15.7vh;
+    }
+  }
+
   .ion-img-button {
     cursor: pointer;
   }
