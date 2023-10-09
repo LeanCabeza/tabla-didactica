@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FirebaseService } from 'src/app/services/firebase.service';
+import { IonFab } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-home',
@@ -8,6 +10,8 @@ import { FirebaseService } from 'src/app/services/firebase.service';
 })
 export class HomePage implements OnInit {
 
+  @ViewChild('fab') fab: IonFab ;
+  backgroundImg: string = '/assets/images/background.jpeg'; 
   vista: string = "colores";
   idioma: string = "espanol";
   item: string = "";
@@ -15,6 +19,10 @@ export class HomePage implements OnInit {
   constructor(private firebaseService:FirebaseService) { }
 
   ngOnInit() {
+  }
+  
+  onClose() {
+    this.fab.close();
   }
 
   generarSonido(idioma:any,item: string ) {

@@ -31,7 +31,7 @@
       <form (submit)="Login()">
         <ion-item class="ion-item">
           <ion-icon name="person" class="icon-login"></ion-icon>
-          <ion-input class="ionput" aria-label="Correo" [formControl]="correo" [clearOnEdit]="true" type="email"
+          <ion-input style="font-size: 25px;" class="ionput" aria-label="Correo" [formControl]="correo" [clearOnEdit]="true" type="email"
             required placeholder="Correo" errorText="Correo invalido" helperText="Ingrese un correo valido"
             full></ion-input>
         </ion-item>
@@ -49,7 +49,7 @@
         <br>
         <ion-item class="ion-item">
           <ion-icon name="key" class="icon-login"></ion-icon>
-          <ion-input class="ionput"  [formControl]="password" aria-label="Contraseña" [clearOnEdit]="true" type="password" required
+          <ion-input style="font-size: 25px;" class="ionput"  [formControl]="password" aria-label="Contraseña" [clearOnEdit]="true" type="password" required
             placeholder="Contraseña" [counter]="true" maxlength="8"
             errorText="Contraseña incorrecta" full></ion-input>
         </ion-item>
@@ -68,7 +68,7 @@
         </div>
         <br>
         <div>
-          <ion-button expand="block" type="submit"> Ingresar </ion-button>
+          <ion-button expand="block" type="submit" style="font-size: 30px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"> Ingresar </ion-button>
         </div>
 
       </form>
